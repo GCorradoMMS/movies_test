@@ -1,6 +1,4 @@
 <?php
-require_once(__ROOT__.'/config/Database.php'); 
-
 class Utils {
 
     public function appHeader()
@@ -38,12 +36,6 @@ class Utils {
             'message'  => "Something went wrong!",
             'code' => 500]));
         exit();
-    }
-    
-    public function migrate()
-    {
-        $db = new Database;
-        $db->migrate();
     }
     
     public function pp($msg, $isDie = true)

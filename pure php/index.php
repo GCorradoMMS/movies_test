@@ -30,20 +30,20 @@ switch ($uri[2]) {
         break;
     case 'create':
         $movie = $_POST['info'];
-        $result = $movies->create($movie);
+        $movies->create($movie);
         break;
     case 'update' :
         $update = $_POST['info'];
         $id = $_POST['id'];
-        $result = $movies->update($update, $id);
+        $movies->update($update, $id);
         break;
     case 'delete' :
         $id = $_POST['id'];
-        $result = $movies->delete($id);
+        $movies->delete($id);
         break;
-    // case 'setup' : Setup a migration in a fresh installation
-    //     $utils->migrate();
-    //     break;
+    // case 'setup-migration' : Setup a migration in a fresh installation
+    //      $movies->migrate();
+    //      break;
     default:
         $utils->notFound(); 
         break;

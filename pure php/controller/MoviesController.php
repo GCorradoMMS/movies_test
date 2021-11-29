@@ -33,4 +33,9 @@ class MoviesController {
     {
         return $this->movie->delete($id);
     }
+    
+    public function migrate() 
+    {
+        return $this->movie->migrate();
+    }
 }
